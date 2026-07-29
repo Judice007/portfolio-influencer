@@ -406,74 +406,76 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="feed-highlights">
-            <div className="feed-highlights-heading">
-              <div>
-                <span>Mais vistos no Instagram</span>
-                <h3>Conteúdos que ganharam alcance.</h3>
+          <div className="feed-highlights-row">
+            <div className="feed-highlights">
+              <div className="feed-highlights-heading">
+                <div>
+                  <span>Mais vistos no Instagram</span>
+                  <h3>Conteúdos que ganharam alcance.</h3>
+                </div>
+                <small>Engajamento público · {PROFILE_SNAPSHOT_DATE}</small>
               </div>
-              <small>Engajamento público · {PROFILE_SNAPSHOT_DATE}</small>
-            </div>
 
-            <div className="feed-highlights-grid">
-              {mostViewedReels.map((reel, index) => (
-                <a
-                  className="feed-highlight-card"
-                  href={reel.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={reel.href}
-                >
-                  <img src={reel.src} alt={reel.alt} loading="lazy" />
-                  <span className="feed-highlight-rank">
-                    0{index + 1} · mais visto
-                  </span>
-                  <span className="feed-highlight-proof">{reel.proof}</span>
-                  <span className="feed-highlight-gradient" aria-hidden="true" />
-                  <span className="feed-highlight-copy">
-                    <small>{reel.eyebrow}</small>
-                    <strong>{reel.title}</strong>
-                    <i aria-hidden="true">↗</i>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div
-            className="feed-highlights feed-highlights-tiktok"
-            id="tiktok-mais-vistos"
-          >
-            <div className="feed-highlights-heading">
-              <div>
-                <span>Mais vistos no TikTok</span>
-                <h3>Humor que atravessou plataformas.</h3>
+              <div className="feed-highlights-grid">
+                {mostViewedReels.map((reel, index) => (
+                  <a
+                    className="feed-highlight-card"
+                    href={reel.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={reel.href}
+                  >
+                    <img src={reel.src} alt={reel.alt} loading="lazy" />
+                    <span className="feed-highlight-rank">
+                      0{index + 1} · mais visto
+                    </span>
+                    <span className="feed-highlight-proof">{reel.proof}</span>
+                    <span className="feed-highlight-gradient" aria-hidden="true" />
+                    <span className="feed-highlight-copy">
+                      <small>{reel.eyebrow}</small>
+                      <strong>{reel.title}</strong>
+                      <i aria-hidden="true">↗</i>
+                    </span>
+                  </a>
+                ))}
               </div>
-              <small>Ranking informado por Felipe · curtidas públicas</small>
             </div>
 
-            <div className="feed-highlights-grid">
-              {mostViewedTikToks.map((video, index) => (
-                <a
-                  className="feed-highlight-card"
-                  href={video.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={video.href}
-                >
-                  <img src={video.src} alt={video.alt} loading="lazy" />
-                  <span className="feed-highlight-rank">
-                    0{index + 1} · mais visto
-                  </span>
-                  <span className="feed-highlight-proof">{video.proof}</span>
-                  <span className="feed-highlight-gradient" aria-hidden="true" />
-                  <span className="feed-highlight-copy">
-                    <small>{video.eyebrow}</small>
-                    <strong>{video.title}</strong>
-                    <i aria-hidden="true">↗</i>
-                  </span>
-                </a>
-              ))}
+            <div
+              className="feed-highlights feed-highlights-tiktok"
+              id="tiktok-mais-vistos"
+            >
+              <div className="feed-highlights-heading">
+                <div>
+                  <span>Mais vistos no TikTok</span>
+                  <h3>Humor que atravessou plataformas.</h3>
+                </div>
+                <small>Ranking informado por Felipe · curtidas públicas</small>
+              </div>
+
+              <div className="feed-highlights-grid">
+                {mostViewedTikToks.map((video, index) => (
+                  <a
+                    className="feed-highlight-card"
+                    href={video.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={video.href}
+                  >
+                    <img src={video.src} alt={video.alt} loading="lazy" />
+                    <span className="feed-highlight-rank">
+                      0{index + 1} · mais visto
+                    </span>
+                    <span className="feed-highlight-proof">{video.proof}</span>
+                    <span className="feed-highlight-gradient" aria-hidden="true" />
+                    <span className="feed-highlight-copy">
+                      <small>{video.eyebrow}</small>
+                      <strong>{video.title}</strong>
+                      <i aria-hidden="true">↗</i>
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

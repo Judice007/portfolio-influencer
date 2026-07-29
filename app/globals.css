@@ -806,6 +806,17 @@ img {
   color: var(--ink);
 }
 
+.feed-highlights-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feed-highlights-row .feed-highlights {
+  margin-top: 0;
+}
+
 .feed-highlights {
   margin-top: 1rem;
   padding: 1rem;
@@ -893,6 +904,7 @@ img {
 
 .feed-highlight-groups {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.35rem;
 }
 
@@ -935,7 +947,9 @@ img {
 }
 
 .feed-highlights-youtube .feed-highlights-grid-landscape {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* One column: at the paired Shorts/Vídeos width, a 16:10 card is too
+     short for two side by side without its rank/views badges colliding. */
+  grid-template-columns: 1fr;
 }
 
 .feed-highlights-youtube .feed-highlights-grid-landscape .feed-highlight-card {
@@ -3333,6 +3347,20 @@ footer > span:last-child {
 @keyframes ticker {
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* The TikTok/Shorts cards need >=260px per column; below ~1200px viewport
+   the halved section width can't fit two of them side by side without
+   overflow, so the paired layouts drop back to one column here. */
+@media (max-width: 1200px) {
+  .feed-highlights-row,
+  .feed-highlight-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-highlights-youtube .feed-highlights-grid-landscape {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
