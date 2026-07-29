@@ -102,6 +102,44 @@ const mostViewedTikToks = [
   },
 ] as const;
 
+const mostViewedShorts = [
+  {
+    src: "/youtube/mais-visto-vulcao.jpg",
+    alt: "Felipe Júdice narrando um vídeo sobre uma erupção vulcânica",
+    eyebrow: "Curiosidades",
+    title: "Vulcão em erupção!!",
+    proof: "351,8 mil visualizações",
+    href: "https://youtube.com/shorts/oGQSKfA6NoY",
+  },
+  {
+    src: "/youtube/mais-visto-nananana.jpg",
+    alt: "Cachorro dançando no Short Nanananananana de Felipe Júdice",
+    eyebrow: "Futebol & humor",
+    title: "Nanananananana 🎵 eu to malucooooo",
+    proof: "121,4 mil visualizações",
+    href: "https://youtube.com/shorts/19Ar33Zo7kk",
+  },
+] as const;
+
+const mostViewedYouTubeVideos = [
+  {
+    src: "/youtube/mais-visto-ea-fc-24.jpg",
+    alt: "Capa do vídeo sobre comprar EA Sports FC 24 por 150 reais no PC",
+    eyebrow: "Games · EA Sports",
+    title: "Comprar EA Sports FC 24 por 150 reais no PC?",
+    proof: "13,1 mil visualizações",
+    href: "https://www.youtube.com/watch?v=vd9fztd_ksM",
+  },
+  {
+    src: "/youtube/mais-visto-the-hunter.jpg",
+    alt: "Capa do vídeo ensinando a resolver erro ao abrir The Hunter",
+    eyebrow: "Tutorial · Games",
+    title: "The Hunter não abre na Epic ou Steam",
+    proof: "12,8 mil visualizações",
+    href: "https://www.youtube.com/watch?v=UXQMwc6H8NA",
+  },
+] as const;
+
 const partners = [
   {
     kind: "reel",
@@ -456,6 +494,81 @@ export default function Home() {
             </div>
           </div>
 
+          <div
+            className="feed-highlights feed-highlights-youtube"
+            id="youtube-mais-vistos"
+          >
+            <div className="feed-highlights-heading">
+              <div>
+                <span>Mais vistos no YouTube</span>
+                <h3>Shorts e vídeos que viraram alcance.</h3>
+              </div>
+              <small>Visualizações públicas · 29/07/2026</small>
+            </div>
+
+            <div className="feed-highlight-groups">
+              <div className="feed-highlight-group">
+                <div className="feed-highlight-group-heading">
+                  <strong>Shorts</strong>
+                  <small>Conteúdo rápido</small>
+                </div>
+                <div className="feed-highlights-grid feed-highlights-grid-vertical">
+                  {mostViewedShorts.map((short, index) => (
+                    <a
+                      className="feed-highlight-card"
+                      href={short.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={short.href}
+                    >
+                      <img src={short.src} alt={short.alt} loading="lazy" />
+                      <span className="feed-highlight-rank">
+                        0{index + 1} · mais visto
+                      </span>
+                      <span className="feed-highlight-proof">{short.proof}</span>
+                      <span className="feed-highlight-gradient" aria-hidden="true" />
+                      <span className="feed-highlight-copy">
+                        <small>{short.eyebrow}</small>
+                        <strong>{short.title}</strong>
+                        <i aria-hidden="true">↗</i>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="feed-highlight-group">
+                <div className="feed-highlight-group-heading">
+                  <strong>Vídeos</strong>
+                  <small>Conteúdo completo</small>
+                </div>
+                <div className="feed-highlights-grid feed-highlights-grid-landscape">
+                  {mostViewedYouTubeVideos.map((video, index) => (
+                    <a
+                      className="feed-highlight-card"
+                      href={video.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={video.href}
+                    >
+                      <img src={video.src} alt={video.alt} loading="lazy" />
+                      <span className="feed-highlight-rank">
+                        0{index + 1} · mais visto
+                      </span>
+                      <span className="feed-highlight-proof">{video.proof}</span>
+                      <span className="feed-highlight-gradient" aria-hidden="true" />
+                      <span className="feed-highlight-copy">
+                        <small>{video.eyebrow}</small>
+                        <strong>{video.title}</strong>
+                        <i aria-hidden="true">↗</i>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="feed-grid">
             {instagramPosts.map((post) => (
               <a
@@ -489,13 +602,99 @@ export default function Home() {
                 <span>já faz parte da história.</span>
               </h2>
               <p>
-                Presença forte em Angra dos Reis e uma audiência adulta jovem
-                que acompanha conteúdo de vida real, entretenimento e
-                experiências.
+                Nos últimos 30 dias, o conteúdo alcançou quase 47 mil contas,
+                com os Reels levando o Judice007 principalmente para quem ainda
+                não seguia o perfil.
               </p>
             </div>
 
             <div className="audience-dashboard">
+              <article className="insights-card data-card">
+                <div className="card-topline">
+                  <span>Desempenho no Instagram</span>
+                  <small>Últimos 30 dias · 29/07/2026</small>
+                </div>
+
+                <div className="insights-kpis">
+                  <div>
+                    <small>Visualizações</small>
+                    <strong>67.866</strong>
+                  </div>
+                  <div>
+                    <small>Contas alcançadas</small>
+                    <strong>46.967</strong>
+                  </div>
+                  <div>
+                    <small>Interações</small>
+                    <strong>2,5 mil</strong>
+                  </div>
+                  <div>
+                    <small>Seguidores líquidos</small>
+                    <strong>+38</strong>
+                  </div>
+                </div>
+
+                <div className="insights-detail-grid">
+                  <div className="insights-source">
+                    <div>
+                      <span>Descoberta</span>
+                      <strong>87,6%</strong>
+                      <small>das visualizações vieram de não seguidores</small>
+                    </div>
+                    <div
+                      className="insights-source-bar"
+                      aria-label="87,6% de não seguidores e 12,4% de seguidores"
+                    >
+                      <i aria-hidden="true" />
+                    </div>
+                    <p>
+                      <span>Não seguidores · 87,6%</span>
+                      <span>Seguidores · 12,4%</span>
+                    </p>
+                  </div>
+
+                  <div className="content-performance">
+                    <span>Visualizações por formato</span>
+                    <div>
+                      <p>
+                        <span>Reels</span>
+                        <strong>60 mil</strong>
+                      </p>
+                      <i style={{ "--bar": "100%" } as React.CSSProperties} />
+                    </div>
+                    <div>
+                      <p>
+                        <span>Stories</span>
+                        <strong>7,7 mil</strong>
+                      </p>
+                      <i style={{ "--bar": "12.8%" } as React.CSSProperties} />
+                    </div>
+                    <div>
+                      <p>
+                        <span>Posts</span>
+                        <strong>449</strong>
+                      </p>
+                      <i style={{ "--bar": "1%" } as React.CSSProperties} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="insights-profile-activity">
+                  <p>
+                    <strong>383</strong>
+                    <span>visitas ao perfil</span>
+                  </p>
+                  <p>
+                    <strong>7</strong>
+                    <span>toques no link da bio</span>
+                  </p>
+                  <p>
+                    <strong>2.939</strong>
+                    <span>seguidores · +1,3%</span>
+                  </p>
+                </div>
+              </article>
+
               <article className="gender-card data-card">
                 <div className="card-topline">
                   <span>Por gênero</span>
@@ -503,21 +702,22 @@ export default function Home() {
                 </div>
                 <div className="gender-chart">
                   <div className="donut" aria-hidden="true">
-                    <span>55%</span>
+                    <span>56%</span>
                   </div>
                   <div className="legend">
                     <p>
                       <i className="legend-red" aria-hidden="true" />
-                      <span>Feminino</span>
-                      <strong>55%</strong>
+                      <span>Mulheres</span>
+                      <strong>56%</strong>
                     </p>
                     <p>
                       <i className="legend-paper" aria-hidden="true" />
-                      <span>Masculino</span>
-                      <strong>45%</strong>
+                      <span>Homens</span>
+                      <strong>44%</strong>
                     </p>
                   </div>
                 </div>
+
               </article>
 
               <article className="age-card data-card">
@@ -528,47 +728,595 @@ export default function Home() {
                 <div className="bar-list">
                   <div>
                     <p>
-                      <span>25–34</span>
-                      <strong>58,2%</strong>
+                      <span>13–17</span>
+                      <strong>0,2%</strong>
                     </p>
-                    <i style={{ "--bar": "58.2%" } as React.CSSProperties} />
+                    <i style={{ "--bar": "0.2%" } as React.CSSProperties} />
                   </div>
                   <div>
                     <p>
                       <span>18–24</span>
-                      <strong>23,2%</strong>
+                      <strong>10,6%</strong>
                     </p>
-                    <i style={{ "--bar": "23.2%" } as React.CSSProperties} />
+                    <i style={{ "--bar": "10.6%" } as React.CSSProperties} />
                   </div>
                   <div>
                     <p>
-                      <span>34–44</span>
-                      <strong>12,7%</strong>
+                      <span>25–34</span>
+                      <strong>59,7%</strong>
                     </p>
-                    <i style={{ "--bar": "12.7%" } as React.CSSProperties} />
+                    <i style={{ "--bar": "59.7%" } as React.CSSProperties} />
+                  </div>
+                  <div>
+                    <p>
+                      <span>35–44</span>
+                      <strong>18,6%</strong>
+                    </p>
+                    <i style={{ "--bar": "18.6%" } as React.CSSProperties} />
+                  </div>
+                  <div>
+                    <p>
+                      <span>45–54</span>
+                      <strong>7,4%</strong>
+                    </p>
+                    <i style={{ "--bar": "7.4%" } as React.CSSProperties} />
+                  </div>
+                  <div>
+                    <p>
+                      <span>55–64</span>
+                      <strong>2,6%</strong>
+                    </p>
+                    <i style={{ "--bar": "2.6%" } as React.CSSProperties} />
+                  </div>
+                  <div>
+                    <p>
+                      <span>65+</span>
+                      <strong>0,9%</strong>
+                    </p>
+                    <i style={{ "--bar": "0.9%" } as React.CSSProperties} />
                   </div>
                 </div>
+
               </article>
 
               <article className="location-card data-card">
                 <div className="card-topline">
-                  <span>Por localidade</span>
-                  <small>Top cidades</small>
+                  <span>Principais localizações</span>
+                  <small>Países</small>
                 </div>
                 <ol>
                   <li>
-                    <span>Angra dos Reis</span>
-                    <strong>63,1%</strong>
+                    <span>Brasil</span>
+                    <strong>96,5%</strong>
                   </li>
                   <li>
-                    <span>Rio de Janeiro</span>
-                    <strong>7,0%</strong>
+                    <span>Estados Unidos</span>
+                    <strong>1,0%</strong>
                   </li>
                   <li>
-                    <span>São Paulo</span>
-                    <strong>3,1%</strong>
+                    <span>Portugal</span>
+                    <strong>0,4%</strong>
+                  </li>
+                  <li>
+                    <span>Espanha</span>
+                    <strong>0,3%</strong>
+                  </li>
+                  <li>
+                    <span>Nigéria</span>
+                    <strong>0,1%</strong>
                   </li>
                 </ol>
+              </article>
+
+              <article className="activity-card data-card">
+                <div className="card-topline">
+                  <span>Horários de atividade</span>
+                  <small>Fuso horário BRT</small>
+                </div>
+                <div className="activity-layout">
+                  <div
+                    className="activity-chart"
+                    aria-label="Atividade dos seguidores ao longo do dia, com maior concentração às 18 horas"
+                  >
+                    {[
+                      ["0h", "42%"],
+                      ["3h", "14%"],
+                      ["6h", "34%"],
+                      ["9h", "76%"],
+                      ["12h", "95%"],
+                      ["15h", "96%"],
+                      ["18h", "100%"],
+                      ["21h", "88%"],
+                    ].map(([time, height]) => (
+                      <div key={time}>
+                        <i
+                          style={
+                            { "--activity": height } as React.CSSProperties
+                          }
+                        />
+                        <small>{time}</small>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="activity-summary">
+                    <span>Melhor janela</span>
+                    <strong>18h–21h</strong>
+                    <p>Seguidores mais ativos às segundas, terças e quintas.</p>
+                    <small>Dados dos últimos 30 dias</small>
+                  </div>
+                </div>
+              </article>
+
+              <article className="tiktok-audience-card data-card">
+                <div className="card-topline">
+                  <span>Audiência no TikTok</span>
+                  <small>30/06–27/07/2026</small>
+                </div>
+
+                <div className="tiktok-performance-kpis">
+                  <div>
+                    <small>Visualizações de publicações</small>
+                    <strong>1,7 mil</strong>
+                  </div>
+                  <div>
+                    <small>Visualizações de perfil</small>
+                    <strong>23</strong>
+                  </div>
+                  <div>
+                    <small>Curtidas</small>
+                    <strong>25</strong>
+                  </div>
+                  <div>
+                    <small>Compartilhamentos</small>
+                    <strong>4</strong>
+                  </div>
+                </div>
+
+                <div className="tiktok-audience-layout">
+                  <div className="tiktok-follower-kpis">
+                    <div>
+                      <small>Total de seguidores</small>
+                      <strong>8.705</strong>
+                    </div>
+                    <div>
+                      <small>Seguidores líquidos</small>
+                      <strong>−14</strong>
+                      <span>no período analisado</span>
+                    </div>
+                  </div>
+
+                  <div className="tiktok-gender">
+                    <span>Gênero dos seguidores</span>
+                    <div>
+                      <p>
+                        <span>Masculino</span>
+                        <strong>64%</strong>
+                      </p>
+                      <i
+                        className="tiktok-gender-male"
+                        aria-label="64% masculino"
+                      />
+                    </div>
+                    <div>
+                      <p>
+                        <span>Feminino</span>
+                        <strong>36%</strong>
+                      </p>
+                      <i
+                        className="tiktok-gender-female"
+                        aria-label="36% feminino"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="tiktok-activity-peaks">
+                    <div>
+                      <small>Pico dos seguidores</small>
+                      <strong>20h</strong>
+                      <span>808 ativos · últimos 7 dias</span>
+                    </div>
+                    <div>
+                      <small>Pico dos espectadores</small>
+                      <strong>12h–13h</strong>
+                      <span>segunda-feira · 63 ativos</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="tiktok-viewer-overview">
+                  <div className="tiktok-viewer-kpis">
+                    <span>Espectadores · 28 dias</span>
+                    <div>
+                      <p>
+                        <small>Total</small>
+                        <strong>1,6 mil</strong>
+                      </p>
+                      <p>
+                        <small>Novos</small>
+                        <strong>1,5 mil</strong>
+                      </p>
+                    </div>
+                    <p className="tiktok-top-content">
+                      <span>Publicação mais vista no período</span>
+                      <strong>421 visualizações</strong>
+                    </p>
+                  </div>
+
+                  <div className="tiktok-viewer-gender">
+                    <span>Gênero dos espectadores</span>
+                    {[
+                      ["Masculino", "67%", "viewer-male"],
+                      ["Feminino", "32%", "viewer-female"],
+                      ["Outro", "1%", "viewer-other"],
+                    ].map(([label, value, className]) => (
+                      <div key={label}>
+                        <p>
+                          <span>{label}</span>
+                          <strong>{value}</strong>
+                        </p>
+                        <i className={className} aria-hidden="true" />
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="tiktok-traffic-source">
+                    <span>Origem de tráfego</span>
+                    {[
+                      ["Pesquisar", "83,4%", "83.4%"],
+                      ["Para você", "14,7%", "14.7%"],
+                      ["Perfil pessoal", "1,4%", "1.4%"],
+                      ["Som", "0,4%", "0.4%"],
+                      ["Seguindo", "0,1%", "0.1%"],
+                    ].map(([label, value, width]) => (
+                      <div key={label}>
+                        <p>
+                          <span>{label}</span>
+                          <strong>{value}</strong>
+                        </p>
+                        <i
+                          style={{ "--traffic": width } as React.CSSProperties}
+                          aria-hidden="true"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
+
+              <article className="youtube-audience-card data-card">
+                <div className="card-topline">
+                  <span>Audiência no YouTube</span>
+                  <small>Dados recentes e históricos · 28/07/2026</small>
+                </div>
+
+                <div className="youtube-lifetime-overview">
+                  <div className="youtube-lifetime-heading">
+                    <span>Canal em números</span>
+                    <small>Todo o período</small>
+                  </div>
+
+                  <div className="youtube-lifetime-kpis">
+                    <div>
+                      <small>Inscritos</small>
+                      <strong>3.054</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações</small>
+                      <strong>1,4 mi</strong>
+                    </div>
+                    <div>
+                      <small>Marcações “Gostei”</small>
+                      <strong>48,3 mil</strong>
+                    </div>
+                    <div>
+                      <small>Comentários</small>
+                      <strong>1,8 mil</strong>
+                    </div>
+                  </div>
+
+                  <div className="youtube-lifetime-details">
+                    <div className="youtube-lifetime-ranking">
+                      <span>Shorts de maior alcance</span>
+                      {[
+                        ["Vulcão em erupção", "351,8 mil"],
+                        ["Nanananananana", "121,4 mil"],
+                        ["Ficar preso no elevador", "47,8 mil"],
+                      ].map(([title, views]) => (
+                        <p key={title}>
+                          <small>{title}</small>
+                          <strong>{views}</strong>
+                        </p>
+                      ))}
+                    </div>
+
+                    <div className="youtube-lifetime-ranking">
+                      <span>Vídeos em alta</span>
+                      {[
+                        ["Comprar EA Sports FC 24", "13,1 mil"],
+                        ["The Hunter não abre", "12,8 mil"],
+                        ["Baixar Point Blank", "11,6 mil"],
+                      ].map(([title, views]) => (
+                        <p key={title}>
+                          <small>{title}</small>
+                          <strong>{views}</strong>
+                        </p>
+                      ))}
+                    </div>
+
+                    <div className="youtube-lifetime-audience">
+                      <span>Público-alvo histórico</span>
+                      <div>
+                        <small>Idade</small>
+                        <p>18–24 · 19%</p>
+                        <p>25–34 · 31%</p>
+                        <p>35–44 · 25%</p>
+                      </div>
+                      <div>
+                        <small>Gênero</small>
+                        <p>Masculino · 75%</p>
+                        <p>Feminino · 24%</p>
+                        <p>Especificado · 0%</p>
+                      </div>
+                      <div>
+                        <small>Região</small>
+                        <p>Brasil · 93%</p>
+                        <p>Portugal · 2%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="youtube-period-heading">
+                  <span>Desempenho recente</span>
+                  <small>Últimos 28 dias</small>
+                </div>
+
+                <div className="youtube-audience-kpis">
+                  <div>
+                    <small>Novos inscritos</small>
+                    <strong>+9</strong>
+                  </div>
+                  <div>
+                    <small>Tempo de não inscritos</small>
+                    <strong>99,6%</strong>
+                  </div>
+                  <div>
+                    <small>Novos espectadores</small>
+                    <strong>92,6%</strong>
+                  </div>
+                  <div>
+                    <small>Audiência no Brasil</small>
+                    <strong>90,4%</strong>
+                  </div>
+                </div>
+
+                <div className="youtube-audience-grid">
+                  <div className="youtube-demographics">
+                    <span>Perfil da audiência</span>
+                    <div className="youtube-gender-bars">
+                      <div>
+                        <p>
+                          <span>Masculino</span>
+                          <strong>60,1%</strong>
+                        </p>
+                        <i className="youtube-gender-male" aria-hidden="true" />
+                      </div>
+                      <div>
+                        <p>
+                          <span>Feminino</span>
+                          <strong>39,9%</strong>
+                        </p>
+                        <i className="youtube-gender-female" aria-hidden="true" />
+                      </div>
+                    </div>
+
+                    <div className="youtube-age-bars">
+                      <small>Idade</small>
+                      {[
+                        ["13–17", "29,9%", "29.9%"],
+                        ["18–24", "1,3%", "1.3%"],
+                        ["25–34", "33,2%", "33.2%"],
+                        ["35–44", "33,1%", "33.1%"],
+                        ["45–54", "2,5%", "2.5%"],
+                        ["55–64", "0,0%", "0%"],
+                      ].map(([label, value, width]) => (
+                        <div key={label}>
+                          <p>
+                            <span>{label}</span>
+                            <strong>{value}</strong>
+                          </p>
+                          <i
+                            style={{ "--youtube-bar": width } as React.CSSProperties}
+                            aria-hidden="true"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="youtube-devices">
+                    <span>Dispositivos</span>
+                    {[
+                      ["Celular", "68,5%", "68.5%"],
+                      ["Computador", "19,6%", "19.6%"],
+                      ["TV", "9,5%", "9.5%"],
+                      ["Tablet", "2,6%", "2.6%"],
+                    ].map(([label, value, width]) => (
+                      <div key={label}>
+                        <p>
+                          <span>{label}</span>
+                          <strong>{value}</strong>
+                        </p>
+                        <i
+                          style={{ "--youtube-bar": width } as React.CSSProperties}
+                          aria-hidden="true"
+                        />
+                      </div>
+                    ))}
+                    <p className="youtube-region-note">
+                      <span>Região</span>
+                      <strong>Brasil 90,4% · Portugal 0,1%</strong>
+                    </p>
+                  </div>
+
+                  <div className="youtube-behavior">
+                    <span>Comportamento de visualização</span>
+                    <div>
+                      <p>
+                        <span>Novos espectadores</span>
+                        <strong>92,6%</strong>
+                      </p>
+                      <i style={{ "--youtube-bar": "92.6%" } as React.CSSProperties} />
+                    </div>
+                    <div>
+                      <p>
+                        <span>Espectadores casuais</span>
+                        <strong>7,3%</strong>
+                      </p>
+                      <i style={{ "--youtube-bar": "7.3%" } as React.CSSProperties} />
+                    </div>
+                    <div>
+                      <p>
+                        <span>Espectadores frequentes</span>
+                        <strong>&lt; 0,1%</strong>
+                      </p>
+                      <i style={{ "--youtube-bar": "0.1%" } as React.CSSProperties} />
+                    </div>
+
+                    <div className="youtube-format-fit">
+                      <small>Formatos consumidos</small>
+                      <p>
+                        <span>Vídeos</span>
+                        <span>Shorts</span>
+                        <span>Lives</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="youtube-content-overview">
+                  <div className="youtube-content-heading">
+                    <span>Desempenho de conteúdo</span>
+                    <small>Últimos 28 dias · 1 Short publicado</small>
+                  </div>
+
+                  <div className="youtube-content-summary">
+                    <div>
+                      <small>Visualizações</small>
+                      <strong>11,0 mil</strong>
+                    </div>
+                    <div>
+                      <small>Tempo de exibição</small>
+                      <strong>51,8 h</strong>
+                    </div>
+                    <div>
+                      <small>Novos inscritos</small>
+                      <strong>+9</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações · 7 dias</small>
+                      <strong>2,4 mil</strong>
+                    </div>
+                  </div>
+
+                  <div className="youtube-content-grid">
+                    <div className="youtube-content-kpis">
+                      <div>
+                        <small>Público mensal</small>
+                        <strong>5,1 mil</strong>
+                      </div>
+                      <div>
+                        <small>Shorts</small>
+                        <strong>10,5 mil</strong>
+                        <span>visualizações · +32 inscritos</span>
+                      </div>
+                      <div>
+                        <small>Vídeos</small>
+                        <strong>476</strong>
+                        <span>visualizações · +1 inscrito</span>
+                      </div>
+                    </div>
+
+                    <div className="youtube-format-overlap">
+                      <span>Espectadores por formato</span>
+                      {[
+                        ["Somente Shorts", "82%", "82%"],
+                        ["Somente vídeos", "17%", "17%"],
+                        ["Ambos", "1%", "1%"],
+                      ].map(([label, value, width]) => (
+                        <div key={label}>
+                          <p>
+                            <span>{label}</span>
+                            <strong>{value}</strong>
+                          </p>
+                          <i
+                            style={{ "--youtube-bar": width } as React.CSSProperties}
+                            aria-hidden="true"
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="youtube-discovery">
+                      <span>Como encontram o canal</span>
+                      {[
+                        ["Pesquisa do YouTube", "88,3%", "88.3%"],
+                        ["Feed dos Shorts", "8,1%", "8.1%"],
+                        ["Externa", "1,0%", "1%"],
+                        ["Páginas do canal", "1,0%", "1%"],
+                        ["Outros", "1,7%", "1.7%"],
+                      ].map(([label, value, width]) => (
+                        <div key={label}>
+                          <p>
+                            <span>{label}</span>
+                            <strong>{value}</strong>
+                          </p>
+                          <i
+                            style={{ "--youtube-bar": width } as React.CSSProperties}
+                            aria-hidden="true"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="youtube-top-content">
+                    <span>Conteúdo principal · visualizações</span>
+                    <ol>
+                      {[
+                        ["Nanananananana 🎵 eu tô malucooooo", "2,8 mil"],
+                        ["Explosão de botijão de gás", "2,3 mil"],
+                        ["Ficar preso no elevador", "1,8 mil"],
+                        ["Roubo na loja da Apple", "339"],
+                        ["Maior piscina do mundo", "321"],
+                      ].map(([title, views]) => (
+                        <li key={title}>
+                          <span>{title}</span>
+                          <strong>{views}</strong>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+
+                  <div className="youtube-remix-highlight">
+                    <div>
+                      <small>Destaque de remix</small>
+                      <strong>Nanananananana 🎵 eu to malucooooo</strong>
+                    </div>
+                    <p>
+                      <strong>16,7 mil</strong>
+                      <span>visualizações de remix</span>
+                    </p>
+                    <p>
+                      <strong>18</strong>
+                      <span>remixes do destaque</span>
+                    </p>
+                    <p>
+                      <strong>242</strong>
+                      <span>remixes totais</span>
+                    </p>
+                  </div>
+                </div>
               </article>
             </div>
           </div>
@@ -732,7 +1480,7 @@ export default function Home() {
                   </div>
                   <div className="youtube-numbers">
                     <p>
-                      <strong>3,05 mil</strong>
+                      <strong>3.054</strong>
                       <span>inscritos</span>
                     </p>
                     <p>
@@ -881,6 +1629,42 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Abrir o TikTok de Felipe Júdice"
+                >
+                  ↗
+                </a>
+              </div>
+            </article>
+
+            <article className="social-card social-card-x">
+              <div className="social-card-index">04</div>
+              <a
+                className="x-feature"
+                href="https://x.com/FJudice007"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir o perfil de Felipe Júdice no X"
+              >
+                <span className="x-mark" aria-hidden="true">
+                  X
+                </span>
+                <span className="x-profile-copy">
+                  <small>Perfil oficial no X</small>
+                  <strong>@FJudice007</strong>
+                  <span>Felipe Júdice no X, em um link direto e fácil de encontrar.</span>
+                </span>
+                <span className="x-profile-cta">
+                  Visitar perfil <i aria-hidden="true">↗</i>
+                </span>
+              </a>
+
+              <div className="social-card-caption">
+                <span>X (Twitter)</span>
+                <strong>@FJudice007</strong>
+                <a
+                  href="https://x.com/FJudice007"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Abrir o X de Felipe Júdice"
                 >
                   ↗
                 </a>
