@@ -1,5 +1,12 @@
 import { SiteHeader } from "./site-header";
 
+// Snapshot dates for the analytics screenshots below. Update these together
+// with the numbers whenever the data is refreshed — every occurrence in this
+// file reads from these constants, so there's a single place to change.
+const PROFILE_SNAPSHOT_DATE = "29/07/2026";
+const YOUTUBE_SNAPSHOT_DATE = "28/07/2026";
+const TIKTOK_SNAPSHOT_PERIOD = "30/06–27/07/2026";
+
 const niches = [
   "Gastronomia",
   "Viagens",
@@ -372,7 +379,7 @@ export default function Home() {
               loading="lazy"
             />
             <div className="feed-profile-copy">
-              <span>Perfil público · 29/07/2026</span>
+              <span>Perfil público · {PROFILE_SNAPSHOT_DATE}</span>
               <h2>@judice007</h2>
               <p>
                 Humor, gastronomia, futebol e viagens. A vida como ela é para
@@ -405,7 +412,7 @@ export default function Home() {
                 <span>Mais vistos no Instagram</span>
                 <h3>Conteúdos que ganharam alcance.</h3>
               </div>
-              <small>Engajamento público · 29/07/2026</small>
+              <small>Engajamento público · {PROFILE_SNAPSHOT_DATE}</small>
             </div>
 
             <div className="feed-highlights-grid">
@@ -479,7 +486,7 @@ export default function Home() {
                 <span>Mais vistos no YouTube</span>
                 <h3>Shorts e vídeos que viraram alcance.</h3>
               </div>
-              <small>Visualizações públicas · 29/07/2026</small>
+              <small>Visualizações públicas · {PROFILE_SNAPSHOT_DATE}</small>
             </div>
 
             <div className="feed-highlight-groups">
@@ -588,7 +595,7 @@ export default function Home() {
               <article className="insights-card data-card">
                 <div className="card-topline">
                   <span>Desempenho no Instagram</span>
-                  <small>Últimos 30 dias · 29/07/2026</small>
+                  <small>Últimos 30 dias · {PROFILE_SNAPSHOT_DATE}</small>
                 </div>
 
                 <div className="insights-kpis">
@@ -826,7 +833,7 @@ export default function Home() {
               <article className="tiktok-audience-card data-card">
                 <div className="card-topline">
                   <span>Audiência no TikTok</span>
-                  <small>30/06–27/07/2026</small>
+                  <small>{TIKTOK_SNAPSHOT_PERIOD}</small>
                 </div>
 
                 <div className="tiktok-performance-kpis">
@@ -962,7 +969,7 @@ export default function Home() {
               <article className="youtube-audience-card data-card">
                 <div className="card-topline">
                   <span>Audiência no YouTube</span>
-                  <small>Dados recentes e históricos · 28/07/2026</small>
+                  <small>Dados recentes e históricos · {YOUTUBE_SNAPSHOT_DATE}</small>
                 </div>
 
                 <div className="youtube-lifetime-overview">
@@ -1365,7 +1372,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <div>
-                    <span>Perfil público · 29/07/2026</span>
+                    <span>Perfil público · {PROFILE_SNAPSHOT_DATE}</span>
                     <strong>Felipe Júdice</strong>
                     <small>Humor, gastronomia, futebol e viagens.</small>
                   </div>
@@ -1450,7 +1457,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <div>
-                    <span>Canal público · 29/07/2026</span>
+                    <span>Canal público · {PROFILE_SNAPSHOT_DATE}</span>
                     <strong>Judice007</strong>
                     <small>Futebol, games, tecnologia e diversão.</small>
                   </div>
@@ -1536,7 +1543,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <div>
-                    <span>Perfil público · 29/07/2026</span>
+                    <span>Perfil público · {PROFILE_SNAPSHOT_DATE}</span>
                     <strong>Felipe Júdice</strong>
                     <small>
                       Conteúdo da vida real para vocês.
