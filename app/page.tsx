@@ -11,54 +11,36 @@ const instagramPosts = [
   {
     src: "/instagram/copa-chegando.jpg",
     alt: "Capa de Reel de Felipe Júdice sobre a chegada da Copa",
-    eyebrow: "Futebol",
-    title: "Copa chegando, resenha começando.",
-    type: "Reel",
     href: "https://www.instagram.com/judice007/reel/DYN7YyOxgPV/",
     className: "feed-card feed-card-tall",
   },
   {
     src: "/instagram/humor-gamer.jpg",
     alt: "Felipe Júdice em uma cena de humor diante do computador",
-    eyebrow: "Games & humor",
-    title: "Aquela confiança de quem diz: deixa comigo.",
-    type: "Reel",
     href: "https://www.instagram.com/judice007/reel/DYBBWf7RIe2/",
     className: "feed-card",
   },
   {
     src: "/instagram/viagem-sao-paulo.jpg",
     alt: "Capa de Reel de Felipe Júdice conhecendo lugares novos em São Paulo",
-    eyebrow: "Viagens",
-    title: "São Paulo pelo olhar de quem vai viver a cidade.",
-    type: "Reel",
     href: "https://www.instagram.com/judice007/reel/DVzcvLpETAf/",
     className: "feed-card",
   },
   {
     src: "/instagram/angra-dos-reis.jpg",
     alt: "Felipe Júdice com a paisagem de Angra dos Reis ao fundo",
-    eyebrow: "Lifestyle",
-    title: "Angra dos Reis também faz parte da história.",
-    type: "Post",
     href: "https://www.instagram.com/judice007/p/DUHVHtUjHZo/",
     className: "feed-card feed-card-wide",
   },
   {
     src: "/instagram/lifestyle-praia.jpg",
     alt: "Felipe Júdice em um dia de praia",
-    eyebrow: "Vida real",
-    title: "Entre uma entrega e outra, a vida acontece.",
-    type: "Post",
     href: "https://www.instagram.com/judice007/p/DTRRJx8jHKn/",
     className: "feed-card",
   },
   {
     src: "/instagram/humor-trabalho.jpg",
     alt: "Felipe Júdice em uma cena de humor sobre trabalho e pagamento",
-    eyebrow: "Humor",
-    title: "Situações do dia a dia que todo mundo reconhece.",
-    type: "Reel",
     href: "https://www.instagram.com/judice007/reel/DT5oMAHEezq/",
     className: "feed-card feed-card-wide",
   },
@@ -577,15 +559,9 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 key={post.href}
+                aria-label={`${post.alt} — abrir no Instagram`}
               >
                 <img src={post.src} alt={post.alt} loading="lazy" />
-                <div className="feed-card-gradient" aria-hidden="true" />
-                <span className="feed-card-type">{post.type}</span>
-                <div className="feed-card-copy">
-                  <small>{post.eyebrow}</small>
-                  <h3>{post.title}</h3>
-                  <span aria-hidden="true">↗</span>
-                </div>
               </a>
             ))}
           </div>

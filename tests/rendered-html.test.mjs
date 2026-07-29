@@ -33,11 +33,13 @@ test("renders Felipe Judice creator media kit", async () => {
   assert.match(html, /Influencer &amp; criador de conteúdo/i);
   assert.match(html, /Eu vivo histórias/);
   assert.match(html, /Meu universo/);
-  assert.match(html, /Games &amp; humor/);
   assert.match(html, /Meu universo, direto do feed/);
   assert.match(html, /O que eu vivo vira conteúdo/);
   assert.match(html, /2\.939/);
-  assert.match(html, /Copa chegando, resenha começando/);
+  assert.match(html, /Capa de Reel de Felipe Júdice sobre a chegada da Copa/);
+  assert.doesNotMatch(html, /feed-card-gradient/);
+  assert.doesNotMatch(html, /feed-card-type/);
+  assert.doesNotMatch(html, /feed-card-copy/);
   assert.match(html, /instagram\.com\/judice007\/reel\/DYN7YyOxgPV/);
   assert.match(html, /Mais vistos no Instagram/);
   assert.match(html, /instagram\.com\/reel\/CtKoCsFAHYB/);
