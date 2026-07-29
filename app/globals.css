@@ -155,6 +155,11 @@ img {
   transform: translateY(-2px);
 }
 
+.nav-toggle,
+.mobile-nav {
+  display: none;
+}
+
 .hero {
   position: relative;
   min-height: 920px;
@@ -801,6 +806,17 @@ img {
   color: var(--ink);
 }
 
+.feed-highlights-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feed-highlights-row .feed-highlights {
+  margin-top: 0;
+}
+
 .feed-highlights {
   margin-top: 1rem;
   padding: 1rem;
@@ -888,6 +904,7 @@ img {
 
 .feed-highlight-groups {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.35rem;
 }
 
@@ -930,7 +947,9 @@ img {
 }
 
 .feed-highlights-youtube .feed-highlights-grid-landscape {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* One column: at the paired Shorts/Vídeos width, a 16:10 card is too
+     short for two side by side without its rank/views badges colliding. */
+  grid-template-columns: 1fr;
 }
 
 .feed-highlights-youtube .feed-highlights-grid-landscape .feed-highlight-card {
@@ -3254,6 +3273,20 @@ footer > span:last-child {
   }
 }
 
+/* The TikTok/Shorts cards need >=260px per column; below ~1200px viewport
+   the halved section width can't fit two of them side by side without
+   overflow, so the paired layouts drop back to one column here. */
+@media (max-width: 1200px) {
+  .feed-highlights-row,
+  .feed-highlight-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-highlights-youtube .feed-highlights-grid-landscape {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 1100px) {
   .hero {
     grid-template-columns: 1fr;
@@ -3287,15 +3320,79 @@ footer > span:last-child {
 
 @media (max-width: 820px) {
   .site-header {
+    position: fixed;
     top: 0.6rem;
     width: calc(100% - 1rem);
     min-height: 62px;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
     border-radius: 15px;
   }
 
   .desktop-nav {
     display: none;
+  }
+
+  .nav-toggle {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 17px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--paper-bright);
+  }
+
+  .nav-toggle span + span {
+    margin-top: 4px;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    right: 0;
+    z-index: 49;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    background: rgba(10, 10, 10, 0.94);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(18px);
+  }
+
+  .mobile-nav a {
+    padding: 0.85rem 0.9rem;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.85rem;
+    font-weight: 850;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .mobile-nav a:hover {
+    color: var(--paper-bright);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-nav-cta {
+    margin-top: 0.3rem;
+    text-align: center;
+    color: var(--paper-bright) !important;
+    background: var(--red);
   }
 
   .brand-symbol {

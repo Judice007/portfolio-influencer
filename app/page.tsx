@@ -1,3 +1,12 @@
+import { SiteHeader } from "./site-header";
+
+// Snapshot dates for the analytics screenshots below. Update these together
+// with the numbers whenever the data is refreshed — every occurrence in this
+// file reads from these constants, so there's a single place to change.
+const PROFILE_SNAPSHOT_DATE = "29/07/2026";
+const YOUTUBE_SNAPSHOT_DATE = "28/07/2026";
+const TIKTOK_SNAPSHOT_PERIOD = "30/06–27/07/2026";
+
 const niches = [
   "Gastronomia",
   "Viagens",
@@ -48,7 +57,7 @@ const instagramPosts = [
 
 const mostViewedReels = [
   {
-    src: "/instagram/mais-visto-gamer.png",
+    src: "/instagram/mais-visto-gamer.webp",
     alt: "Felipe Júdice em um Reel de humor gamer durante uma partida",
     eyebrow: "Humor gamer",
     title: "Quando o amigo entra na call para surtar.",
@@ -56,7 +65,7 @@ const mostViewedReels = [
     href: "https://www.instagram.com/reel/CtKoCsFAHYB/",
   },
   {
-    src: "/instagram/mais-visto-cavalo.png",
+    src: "/instagram/mais-visto-cavalo.webp",
     alt: "Felipe Júdice reagindo a um cavalo em um Reel de humor",
     eyebrow: "Humor",
     title: "Cadê o meu cavalo?",
@@ -125,7 +134,7 @@ const mostViewedYouTubeVideos = [
 const partners = [
   {
     kind: "reel",
-    src: "/partners/betmgm-reel.png",
+    src: "/partners/betmgm-reel.webp",
     alt: "Frame do conteúdo de Felipe Júdice para a BetMGM",
     className: "partner-card partner-card-reel partner-card-wide",
     href: "https://www.instagram.com/reel/DTti-_ijHNk/",
@@ -134,7 +143,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/le-cordon-bleu-reel.png",
+    src: "/partners/le-cordon-bleu-reel.webp",
     alt: "Felipe Júdice no evento Le Cordon Bleu Rio de Janeiro",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DPab2fLDFDj/",
@@ -143,7 +152,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/maxtitanium-reel.png",
+    src: "/partners/maxtitanium-reel.webp",
     alt: "Felipe Júdice apresentando produtos da Max Titanium",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DOZYukmDicA/",
@@ -152,7 +161,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/meta-ai-reel.png",
+    src: "/partners/meta-ai-reel.webp",
     alt: "Felipe Júdice apresentando a campanha da Meta AI com o Flamengo",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DRvLleegSqc/",
@@ -161,7 +170,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/tburger-reel.png",
+    src: "/partners/tburger-reel.webp",
     alt: "Fachada da T.Burger House em conteúdo de Felipe Júdice",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DRA2YijkXc8/",
@@ -173,33 +182,7 @@ const partners = [
 export default function Home() {
   return (
     <>
-      <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Felipe Júdice — início">
-          <span className="brand-symbol" aria-hidden="true">
-            007
-          </span>
-          <span className="brand-copy">
-            <strong>Felipe Júdice</strong>
-            <small>creator media kit</small>
-          </span>
-        </a>
-
-        <nav className="desktop-nav" aria-label="Navegação principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#universo">Meu universo</a>
-          <a href="#audiencia">Audiência</a>
-          <a href="#parcerias">Parcerias</a>
-        </nav>
-
-        <a
-          className="header-cta"
-          href="https://wa.me/5524998449254"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Falar comigo <span aria-hidden="true">↗</span>
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero" id="inicio">
@@ -378,7 +361,7 @@ export default function Home() {
               loading="lazy"
             />
             <div className="feed-profile-copy">
-              <span>Perfil público · 29/07/2026</span>
+              <span>Perfil público · {PROFILE_SNAPSHOT_DATE}</span>
               <h2>@judice007</h2>
               <p>
                 Humor, gastronomia, futebol e viagens. A vida como ela é para
@@ -405,74 +388,76 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="feed-highlights">
-            <div className="feed-highlights-heading">
-              <div>
-                <span>Mais vistos no Instagram</span>
-                <h3>Conteúdos que ganharam alcance.</h3>
+          <div className="feed-highlights-row">
+            <div className="feed-highlights">
+              <div className="feed-highlights-heading">
+                <div>
+                  <span>Mais vistos no Instagram</span>
+                  <h3>Conteúdos que ganharam alcance.</h3>
+                </div>
+                <small>Engajamento público · {PROFILE_SNAPSHOT_DATE}</small>
               </div>
-              <small>Engajamento público · 29/07/2026</small>
-            </div>
 
-            <div className="feed-highlights-grid">
-              {mostViewedReels.map((reel, index) => (
-                <a
-                  className="feed-highlight-card"
-                  href={reel.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={reel.href}
-                >
-                  <img src={reel.src} alt={reel.alt} loading="lazy" />
-                  <span className="feed-highlight-rank">
-                    0{index + 1} · mais visto
-                  </span>
-                  <span className="feed-highlight-proof">{reel.proof}</span>
-                  <span className="feed-highlight-gradient" aria-hidden="true" />
-                  <span className="feed-highlight-copy">
-                    <small>{reel.eyebrow}</small>
-                    <strong>{reel.title}</strong>
-                    <i aria-hidden="true">↗</i>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div
-            className="feed-highlights feed-highlights-tiktok"
-            id="tiktok-mais-vistos"
-          >
-            <div className="feed-highlights-heading">
-              <div>
-                <span>Mais vistos no TikTok</span>
-                <h3>Humor que atravessou plataformas.</h3>
+              <div className="feed-highlights-grid">
+                {mostViewedReels.map((reel, index) => (
+                  <a
+                    className="feed-highlight-card"
+                    href={reel.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={reel.href}
+                  >
+                    <img src={reel.src} alt={reel.alt} loading="lazy" />
+                    <span className="feed-highlight-rank">
+                      0{index + 1} · mais visto
+                    </span>
+                    <span className="feed-highlight-proof">{reel.proof}</span>
+                    <span className="feed-highlight-gradient" aria-hidden="true" />
+                    <span className="feed-highlight-copy">
+                      <small>{reel.eyebrow}</small>
+                      <strong>{reel.title}</strong>
+                      <i aria-hidden="true">↗</i>
+                    </span>
+                  </a>
+                ))}
               </div>
-              <small>Ranking informado por Felipe · curtidas públicas</small>
             </div>
 
-            <div className="feed-highlights-grid">
-              {mostViewedTikToks.map((video, index) => (
-                <a
-                  className="feed-highlight-card"
-                  href={video.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={video.href}
-                >
-                  <img src={video.src} alt={video.alt} loading="lazy" />
-                  <span className="feed-highlight-rank">
-                    0{index + 1} · mais visto
-                  </span>
-                  <span className="feed-highlight-proof">{video.proof}</span>
-                  <span className="feed-highlight-gradient" aria-hidden="true" />
-                  <span className="feed-highlight-copy">
-                    <small>{video.eyebrow}</small>
-                    <strong>{video.title}</strong>
-                    <i aria-hidden="true">↗</i>
-                  </span>
-                </a>
-              ))}
+            <div
+              className="feed-highlights feed-highlights-tiktok"
+              id="tiktok-mais-vistos"
+            >
+              <div className="feed-highlights-heading">
+                <div>
+                  <span>Mais vistos no TikTok</span>
+                  <h3>Humor que atravessou plataformas.</h3>
+                </div>
+                <small>Ranking informado por Felipe · curtidas públicas</small>
+              </div>
+
+              <div className="feed-highlights-grid">
+                {mostViewedTikToks.map((video, index) => (
+                  <a
+                    className="feed-highlight-card"
+                    href={video.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={video.href}
+                  >
+                    <img src={video.src} alt={video.alt} loading="lazy" />
+                    <span className="feed-highlight-rank">
+                      0{index + 1} · mais visto
+                    </span>
+                    <span className="feed-highlight-proof">{video.proof}</span>
+                    <span className="feed-highlight-gradient" aria-hidden="true" />
+                    <span className="feed-highlight-copy">
+                      <small>{video.eyebrow}</small>
+                      <strong>{video.title}</strong>
+                      <i aria-hidden="true">↗</i>
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -485,7 +470,7 @@ export default function Home() {
                 <span>Mais vistos no YouTube</span>
                 <h3>Shorts e vídeos que viraram alcance.</h3>
               </div>
-              <small>Visualizações públicas · 29/07/2026</small>
+              <small>Visualizações públicas · {PROFILE_SNAPSHOT_DATE}</small>
             </div>
 
             <div className="feed-highlight-groups">
@@ -588,7 +573,7 @@ export default function Home() {
               <article className="insights-card data-card">
                 <div className="card-topline">
                   <span>Desempenho no Instagram</span>
-                  <small>Últimos 30 dias · 29/07/2026</small>
+                  <small>Últimos 30 dias · {PROFILE_SNAPSHOT_DATE}</small>
                 </div>
 
                 <div className="insights-kpis">
@@ -826,7 +811,7 @@ export default function Home() {
               <article className="tiktok-audience-card data-card">
                 <div className="card-topline">
                   <span>Audiência no TikTok</span>
-                  <small>30/06–27/07/2026</small>
+                  <small>{TIKTOK_SNAPSHOT_PERIOD}</small>
                 </div>
 
                 <div className="tiktok-performance-kpis">
@@ -962,7 +947,7 @@ export default function Home() {
               <article className="youtube-audience-card data-card">
                 <div className="card-topline">
                   <span>Audiência no YouTube</span>
-                  <small>Dados recentes e históricos · 28/07/2026</small>
+                  <small>Dados recentes e históricos · {YOUTUBE_SNAPSHOT_DATE}</small>
                 </div>
 
                 <div className="youtube-lifetime-overview">
@@ -1365,7 +1350,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <div>
-                    <span>Perfil público · 29/07/2026</span>
+                    <span>Perfil público · {PROFILE_SNAPSHOT_DATE}</span>
                     <strong>Felipe Júdice</strong>
                     <small>Humor, gastronomia, futebol e viagens.</small>
                   </div>
@@ -1389,7 +1374,7 @@ export default function Home() {
                     aria-label="Assistir Reel de humor gamer no Instagram"
                   >
                     <img
-                      src="/instagram/mais-visto-gamer.png"
+                      src="/instagram/mais-visto-gamer.webp"
                       alt="Felipe Júdice em Reel de humor gamer"
                       loading="lazy"
                     />
@@ -1402,7 +1387,7 @@ export default function Home() {
                     aria-label="Assistir Reel Cadê o meu cavalo no Instagram"
                   >
                     <img
-                      src="/instagram/mais-visto-cavalo.png"
+                      src="/instagram/mais-visto-cavalo.webp"
                       alt="Felipe Júdice reagindo a um cavalo em Reel de humor"
                       loading="lazy"
                     />
@@ -1450,7 +1435,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <div>
-                    <span>Canal público · 29/07/2026</span>
+                    <span>Canal público · {PROFILE_SNAPSHOT_DATE}</span>
                     <strong>Judice007</strong>
                     <small>Futebol, games, tecnologia e diversão.</small>
                   </div>
@@ -1536,7 +1521,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <div>
-                    <span>Perfil público · 29/07/2026</span>
+                    <span>Perfil público · {PROFILE_SNAPSHOT_DATE}</span>
                     <strong>Felipe Júdice</strong>
                     <small>
                       Conteúdo da vida real para vocês.

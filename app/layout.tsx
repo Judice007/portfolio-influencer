@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       locale: "pt_BR",
       images: [
         {
-          url: "/og.png",
+          url: "/og.jpg",
           width: 1732,
           height: 909,
           alt: "Felipe Júdice — influencer e criador de conteúdo",
@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og.png"],
+      images: ["/og.jpg"],
     },
   };
 }
