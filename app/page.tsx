@@ -1,3 +1,5 @@
+import { SiteHeader } from "./site-header";
+
 const niches = [
   "Gastronomia",
   "Viagens",
@@ -191,33 +193,7 @@ const partners = [
 export default function Home() {
   return (
     <>
-      <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Felipe Júdice — início">
-          <span className="brand-symbol" aria-hidden="true">
-            007
-          </span>
-          <span className="brand-copy">
-            <strong>Felipe Júdice</strong>
-            <small>creator media kit</small>
-          </span>
-        </a>
-
-        <nav className="desktop-nav" aria-label="Navegação principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#universo">Meu universo</a>
-          <a href="#audiencia">Audiência</a>
-          <a href="#parcerias">Parcerias</a>
-        </nav>
-
-        <a
-          className="header-cta"
-          href="https://wa.me/5524998449254"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Falar comigo <span aria-hidden="true">↗</span>
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero" id="inicio">
