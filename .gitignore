@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.next/
+out/
+
+# Cloudflare / wrangler local state
+.wrangler/
+.mf/
+
+# Hosting config injected by the deployment platform (not part of source)
+.openai/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Editor/OS
+.DS_Store
