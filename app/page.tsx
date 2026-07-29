@@ -75,7 +75,7 @@ const instagramPosts = [
 
 const mostViewedReels = [
   {
-    src: "/instagram/mais-visto-gamer.png",
+    src: "/instagram/mais-visto-gamer.webp",
     alt: "Felipe Júdice em um Reel de humor gamer durante uma partida",
     eyebrow: "Humor gamer",
     title: "Quando o amigo entra na call para surtar.",
@@ -83,7 +83,7 @@ const mostViewedReels = [
     href: "https://www.instagram.com/reel/CtKoCsFAHYB/",
   },
   {
-    src: "/instagram/mais-visto-cavalo.png",
+    src: "/instagram/mais-visto-cavalo.webp",
     alt: "Felipe Júdice reagindo a um cavalo em um Reel de humor",
     eyebrow: "Humor",
     title: "Cadê o meu cavalo?",
@@ -152,7 +152,7 @@ const mostViewedYouTubeVideos = [
 const partners = [
   {
     kind: "reel",
-    src: "/partners/betmgm-reel.png",
+    src: "/partners/betmgm-reel.webp",
     alt: "Frame do conteúdo de Felipe Júdice para a BetMGM",
     className: "partner-card partner-card-reel partner-card-wide",
     href: "https://www.instagram.com/reel/DTti-_ijHNk/",
@@ -161,7 +161,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/le-cordon-bleu-reel.png",
+    src: "/partners/le-cordon-bleu-reel.webp",
     alt: "Felipe Júdice no evento Le Cordon Bleu Rio de Janeiro",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DPab2fLDFDj/",
@@ -170,7 +170,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/maxtitanium-reel.png",
+    src: "/partners/maxtitanium-reel.webp",
     alt: "Felipe Júdice apresentando produtos da Max Titanium",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DOZYukmDicA/",
@@ -179,7 +179,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/meta-ai-reel.png",
+    src: "/partners/meta-ai-reel.webp",
     alt: "Felipe Júdice apresentando a campanha da Meta AI com o Flamengo",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DRvLleegSqc/",
@@ -188,7 +188,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/tburger-reel.png",
+    src: "/partners/tburger-reel.webp",
     alt: "Fachada da T.Burger House em conteúdo de Felipe Júdice",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DRA2YijkXc8/",
@@ -1396,7 +1396,7 @@ export default function Home() {
                     aria-label="Assistir Reel de humor gamer no Instagram"
                   >
                     <img
-                      src="/instagram/mais-visto-gamer.png"
+                      src="/instagram/mais-visto-gamer.webp"
                       alt="Felipe Júdice em Reel de humor gamer"
                       loading="lazy"
                     />
@@ -1409,7 +1409,7 @@ export default function Home() {
                     aria-label="Assistir Reel Cadê o meu cavalo no Instagram"
                   >
                     <img
-                      src="/instagram/mais-visto-cavalo.png"
+                      src="/instagram/mais-visto-cavalo.webp"
                       alt="Felipe Júdice reagindo a um cavalo em Reel de humor"
                       loading="lazy"
                     />

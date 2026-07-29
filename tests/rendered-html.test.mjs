@@ -192,8 +192,8 @@ test("ships the portfolio assets and removes the starter preview", async () => {
   assert.match(page, /instagram-covers/);
   assert.match(page, /instagram\/copa-chegando\.jpg/);
   assert.match(page, /instagram\/viagem-sao-paulo\.jpg/);
-  assert.match(page, /instagram\/mais-visto-gamer\.png/);
-  assert.match(page, /instagram\/mais-visto-cavalo\.png/);
+  assert.match(page, /instagram\/mais-visto-gamer\.webp/);
+  assert.match(page, /instagram\/mais-visto-cavalo\.webp/);
   assert.match(page, /tiktok\/mais-visto-nada\.jpg/);
   assert.match(page, /tiktok\/mais-visto-stonks\.jpg/);
   assert.match(page, /tiktok\/figurinhas-em-angra\.webp/);
@@ -207,11 +207,11 @@ test("ships the portfolio assets and removes the starter preview", async () => {
   assert.doesNotMatch(page, /partners\/max-fornagro\.webp/);
   assert.doesNotMatch(page, /partners\/meta-ai\.webp/);
   assert.doesNotMatch(page, /partners\/parceiro-gastronomia\.webp/);
-  assert.match(page, /partners\/betmgm-reel\.png/);
-  assert.match(page, /partners\/maxtitanium-reel\.png/);
-  assert.match(page, /partners\/meta-ai-reel\.png/);
-  assert.match(page, /partners\/tburger-reel\.png/);
-  assert.match(page, /partners\/le-cordon-bleu-reel\.png/);
+  assert.match(page, /partners\/betmgm-reel\.webp/);
+  assert.match(page, /partners\/maxtitanium-reel\.webp/);
+  assert.match(page, /partners\/meta-ai-reel\.webp/);
+  assert.match(page, /partners\/tburger-reel\.webp/);
+  assert.match(page, /partners\/le-cordon-bleu-reel\.webp/);
   assert.match(page, /instagram\.com\/reel\/DPab2fLDFDj/);
   assert.match(page, /instagram\.com\/reel\/DTti-_ijHNk/);
   assert.match(page, /instagram\.com\/reel\/DOZYukmDicA/);
@@ -228,8 +228,8 @@ test("ships the portfolio assets and removes the starter preview", async () => {
     access(new URL("../public/instagram/profile.jpg", import.meta.url)),
     access(new URL("../public/instagram/copa-chegando.jpg", import.meta.url)),
     access(new URL("../public/instagram/viagem-sao-paulo.jpg", import.meta.url)),
-    access(new URL("../public/instagram/mais-visto-gamer.png", import.meta.url)),
-    access(new URL("../public/instagram/mais-visto-cavalo.png", import.meta.url)),
+    access(new URL("../public/instagram/mais-visto-gamer.webp", import.meta.url)),
+    access(new URL("../public/instagram/mais-visto-cavalo.webp", import.meta.url)),
     access(new URL("../public/tiktok/profile.jpg", import.meta.url)),
     access(new URL("../public/tiktok/mais-visto-nada.jpg", import.meta.url)),
     access(new URL("../public/tiktok/mais-visto-stonks.jpg", import.meta.url)),
@@ -245,11 +245,11 @@ test("ships the portfolio assets and removes the starter preview", async () => {
     access(
       new URL("../public/youtube/mais-visto-the-hunter.jpg", import.meta.url),
     ),
-    access(new URL("../public/partners/le-cordon-bleu-reel.png", import.meta.url)),
-    access(new URL("../public/partners/betmgm-reel.png", import.meta.url)),
-    access(new URL("../public/partners/maxtitanium-reel.png", import.meta.url)),
-    access(new URL("../public/partners/meta-ai-reel.png", import.meta.url)),
-    access(new URL("../public/partners/tburger-reel.png", import.meta.url)),
+    access(new URL("../public/partners/le-cordon-bleu-reel.webp", import.meta.url)),
+    access(new URL("../public/partners/betmgm-reel.webp", import.meta.url)),
+    access(new URL("../public/partners/maxtitanium-reel.webp", import.meta.url)),
+    access(new URL("../public/partners/meta-ai-reel.webp", import.meta.url)),
+    access(new URL("../public/partners/tburger-reel.webp", import.meta.url)),
   ]);
 
   await assert.rejects(
