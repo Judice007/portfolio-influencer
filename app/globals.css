@@ -1257,6 +1257,13 @@ img {
   line-height: 1;
 }
 
+.value-dash {
+  margin-inline: 0.05em;
+  font-weight: 500;
+  font-size: 0.6em;
+  opacity: 0.6;
+}
+
 .insights-kpis > div:last-child strong {
   color: #4ee58b;
 }

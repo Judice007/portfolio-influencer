@@ -568,8 +568,8 @@ export default function Home() {
                 03 — Quem acompanha o @judice007
               </p>
               <h2>
-                Uma comunidade que
-                <span>já faz parte da história.</span>
+                Uma comunidade
+                <span>que já faz parte da história.</span>
               </h2>
               <p>
                 Nos últimos 30 dias, o conteúdo alcançou quase 47 mil contas,
@@ -624,11 +624,15 @@ export default function Home() {
                     </div>
                     <div>
                       <small>Faixa etária principal</small>
-                      <strong>25–34</strong>
+                      <strong>
+                        25<span className="value-dash">–</span>34
+                      </strong>
                     </div>
                     <div>
                       <small>Melhor horário</small>
-                      <strong>18h–21h</strong>
+                      <strong>
+                        18h<span className="value-dash">–</span>21h
+                      </strong>
                     </div>
                   </div>
                 </article>
