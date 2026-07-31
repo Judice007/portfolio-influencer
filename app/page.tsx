@@ -561,194 +561,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="audience" id="audiencia">
-          <div className="audience-inner section-shell">
-            <div className="audience-heading">
-              <p className="section-label section-label-light">
-                03 — Quem acompanha o @judice007
-              </p>
-              <h2>
-                Uma comunidade
-                <span>que já faz parte da história.</span>
-              </h2>
-              <p>
-                Nos últimos 30 dias, o conteúdo alcançou quase 47 mil contas,
-                com os Reels levando o Judice007 principalmente para quem ainda
-                não seguia o perfil.
-              </p>
-            </div>
-
-            <div className="audience-stats">
-              <div className="audience-dashboard">
-                <article className="insights-card data-card">
-                  <div className="card-topline">
-                    <span>Resumo geral</span>
-                    <small>Todas as redes · {PROFILE_SNAPSHOT_DATE}</small>
-                  </div>
-
-                  <div className="insights-kpis">
-                    <div>
-                      <small>Seguidores no total</small>
-                      <strong>14,7 mil</strong>
-                    </div>
-                    <div>
-                      <small>Contas alcançadas (Instagram)</small>
-                      <strong>46.967</strong>
-                    </div>
-                    <div>
-                      <small>Visualizações (YouTube)</small>
-                      <strong>1,4 mi</strong>
-                    </div>
-                    <div>
-                      <small>Interações (Instagram)</small>
-                      <strong>2,5 mil</strong>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div className="audience-highlights-grid">
-                <article className="data-card platform-card platform-card-instagram">
-                  <div className="card-topline">
-                    <span>Instagram</span>
-                    <small>@judice007 · {PROFILE_SNAPSHOT_DATE}</small>
-                  </div>
-                  <div className="insights-kpis">
-                    <div>
-                      <small>Seguidores</small>
-                      <strong>2.939</strong>
-                    </div>
-                    <div>
-                      <small>Descoberta (não seguidores)</small>
-                      <strong>87,6%</strong>
-                    </div>
-                    <div>
-                      <small>Faixa etária principal</small>
-                      <strong>
-                        25<span className="value-dash">–</span>34
-                      </strong>
-                    </div>
-                    <div>
-                      <small>Melhor horário</small>
-                      <strong>
-                        18h<span className="value-dash">–</span>21h
-                      </strong>
-                    </div>
-                  </div>
-                </article>
-
-                <article className="data-card platform-card platform-card-tiktok">
-                  <div className="card-topline">
-                    <span>TikTok</span>
-                    <small>@judice007 · {TIKTOK_SNAPSHOT_PERIOD}</small>
-                  </div>
-                  <div className="insights-kpis">
-                    <div>
-                      <small>Seguidores</small>
-                      <strong>8.705</strong>
-                    </div>
-                    <div>
-                      <small>Visualizações de publicações</small>
-                      <strong>1,7 mil</strong>
-                    </div>
-                    <div>
-                      <small>Gênero predominante</small>
-                      <strong>64% masc.</strong>
-                    </div>
-                    <div>
-                      <small>Origem: pesquisa</small>
-                      <strong>83,4%</strong>
-                    </div>
-                  </div>
-                </article>
-
-                <article className="data-card platform-card platform-card-youtube">
-                  <div className="card-topline">
-                    <span>YouTube</span>
-                    <small>Judice007 · {YOUTUBE_SNAPSHOT_DATE}</small>
-                  </div>
-                  <div className="insights-kpis">
-                    <div>
-                      <small>Inscritos</small>
-                      <strong>3.054</strong>
-                    </div>
-                    <div>
-                      <small>Visualizações totais</small>
-                      <strong>1,4 mi</strong>
-                    </div>
-                    <div>
-                      <small>Short mais visto</small>
-                      <strong>351,8 mil</strong>
-                    </div>
-                    <div>
-                      <small>Dispositivo: celular</small>
-                      <strong>68,5%</strong>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="partners section-shell" id="parcerias">
-          <div className="section-heading">
-            <div>
-              <p className="section-label">04 — Já criamos juntos</p>
-              <h2>
-                Parcerias que entraram
-                <span>no meu universo.</span>
-              </h2>
-            </div>
-            <p>
-              Marcas e experiências que encontraram no meu jeito uma forma
-              autêntica de chegar até as pessoas.
-            </p>
-          </div>
-
-          <div className="partners-grid">
-            {partners.map((partner) =>
-              partner.kind === "reel" ? (
-                <a
-                  className={partner.className}
-                  href={partner.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Assistir ao Reel ${partner.title} no Instagram`}
-                  key={partner.src}
-                >
-                  <img src={partner.src} alt={partner.alt} loading="lazy" />
-                  <span className="partner-reel-copy">
-                    <small>{partner.eyebrow}</small>
-                    <strong>{partner.title}</strong>
-                    <i>
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="13"
-                        height="13"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.59 1.8c.46-.16 1.26-.35 2.43-.4C9.29 1.34 9.67 1.33 12 1.33Zm0 1.98c-3.15 0-3.5.01-4.74.07-.96.04-1.48.2-1.82.34-.46.18-.78.39-1.13.73-.34.35-.55.67-.73 1.13-.14.34-.3.86-.34 1.82-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.96.2 1.48.34 1.82.18.46.39.78.73 1.13.35.34.67.55 1.13.73.34.14.86.3 1.82.34 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.82-.34.46-.18.78-.39 1.13-.73.34-.35.55-.67.73-1.13.14-.34.3-.86.34-1.82.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.82a3 3 0 0 0-.73-1.13 3 3 0 0 0-1.13-.73c-.34-.14-.86-.3-1.82-.34-1.24-.06-1.59-.07-4.74-.07Zm0 3.37a4.45 4.45 0 1 1 0 8.9 4.45 4.45 0 0 1 0-8.9Zm0 1.98a2.47 2.47 0 1 0 0 4.94 2.47 2.47 0 0 0 0-4.94Zm4.63-2.2a1.04 1.04 0 1 1 0 2.08 1.04 1.04 0 0 1 0-2.08Z"
-                        />
-                      </svg>
-                      Assistir no Instagram
-                    </i>
-                  </span>
-                </a>
-              ) : (
-                <figure className={partner.className} key={partner.src}>
-                  <img src={partner.src} alt={partner.alt} loading="lazy" />
-                </figure>
-              ),
-            )}
-          </div>
-        </section>
-
         <section className="social section-shell" id="redes">
           <div className="social-heading">
-            <p className="section-label">05 — Acompanha de perto</p>
+            <p className="section-label">03 — Acompanha de perto</p>
             <h2>
               A vida acontece.
               <span>O conteúdo continua.</span>
@@ -1049,6 +864,191 @@ export default function Home() {
                 </a>
               </div>
             </article>
+          </div>
+        </section>
+
+        <section className="audience" id="audiencia">
+          <div className="audience-inner section-shell">
+            <div className="audience-heading">
+              <p className="section-label section-label-light">
+                04 — Quem acompanha o @judice007
+              </p>
+              <h2>
+                Uma comunidade
+                <span>que já faz parte da história.</span>
+              </h2>
+              <p>
+                Nos últimos 30 dias, o conteúdo alcançou quase 47 mil contas,
+                com os Reels levando o Judice007 principalmente para quem ainda
+                não seguia o perfil.
+              </p>
+            </div>
+
+            <div className="audience-stats">
+              <div className="audience-dashboard">
+                <article className="insights-card data-card">
+                  <div className="card-topline">
+                    <span>Resumo geral</span>
+                    <small>Todas as redes · {PROFILE_SNAPSHOT_DATE}</small>
+                  </div>
+
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Seguidores no total</small>
+                      <strong>14,7 mil</strong>
+                    </div>
+                    <div>
+                      <small>Contas alcançadas (Instagram)</small>
+                      <strong>46.967</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações (YouTube)</small>
+                      <strong>1,4 mi</strong>
+                    </div>
+                    <div>
+                      <small>Interações (Instagram)</small>
+                      <strong>2,5 mil</strong>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div className="audience-highlights-grid">
+                <article className="data-card platform-card platform-card-instagram">
+                  <div className="card-topline">
+                    <span>Instagram</span>
+                    <small>@judice007 · {PROFILE_SNAPSHOT_DATE}</small>
+                  </div>
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Seguidores</small>
+                      <strong>2.939</strong>
+                    </div>
+                    <div>
+                      <small>Descoberta (não seguidores)</small>
+                      <strong>87,6%</strong>
+                    </div>
+                    <div>
+                      <small>Faixa etária principal</small>
+                      <strong>
+                        25<span className="value-dash">–</span>34
+                      </strong>
+                    </div>
+                    <div>
+                      <small>Melhor horário</small>
+                      <strong>
+                        18h<span className="value-dash">–</span>21h
+                      </strong>
+                    </div>
+                  </div>
+                </article>
+
+                <article className="data-card platform-card platform-card-tiktok">
+                  <div className="card-topline">
+                    <span>TikTok</span>
+                    <small>@judice007 · {TIKTOK_SNAPSHOT_PERIOD}</small>
+                  </div>
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Seguidores</small>
+                      <strong>8.705</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações de publicações</small>
+                      <strong>1,7 mil</strong>
+                    </div>
+                    <div>
+                      <small>Gênero predominante</small>
+                      <strong>64% masc.</strong>
+                    </div>
+                    <div>
+                      <small>Origem: pesquisa</small>
+                      <strong>83,4%</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <article className="data-card platform-card platform-card-youtube">
+                  <div className="card-topline">
+                    <span>YouTube</span>
+                    <small>Judice007 · {YOUTUBE_SNAPSHOT_DATE}</small>
+                  </div>
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Inscritos</small>
+                      <strong>3.054</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações totais</small>
+                      <strong>1,4 mi</strong>
+                    </div>
+                    <div>
+                      <small>Short mais visto</small>
+                      <strong>351,8 mil</strong>
+                    </div>
+                    <div>
+                      <small>Dispositivo: celular</small>
+                      <strong>68,5%</strong>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="partners section-shell" id="parcerias">
+          <div className="section-heading">
+            <div>
+              <p className="section-label">05 — Já criamos juntos</p>
+              <h2>
+                Parcerias que entraram
+                <span>no meu universo.</span>
+              </h2>
+            </div>
+            <p>
+              Marcas e experiências que encontraram no meu jeito uma forma
+              autêntica de chegar até as pessoas.
+            </p>
+          </div>
+
+          <div className="partners-grid">
+            {partners.map((partner) =>
+              partner.kind === "reel" ? (
+                <a
+                  className={partner.className}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Assistir ao Reel ${partner.title} no Instagram`}
+                  key={partner.src}
+                >
+                  <img src={partner.src} alt={partner.alt} loading="lazy" />
+                  <span className="partner-reel-copy">
+                    <small>{partner.eyebrow}</small>
+                    <strong>{partner.title}</strong>
+                    <i>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="13"
+                        height="13"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.59 1.8c.46-.16 1.26-.35 2.43-.4C9.29 1.34 9.67 1.33 12 1.33Zm0 1.98c-3.15 0-3.5.01-4.74.07-.96.04-1.48.2-1.82.34-.46.18-.78.39-1.13.73-.34.35-.55.67-.73 1.13-.14.34-.3.86-.34 1.82-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.96.2 1.48.34 1.82.18.46.39.78.73 1.13.35.34.67.55 1.13.73.34.14.86.3 1.82.34 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.82-.34.46-.18.78-.39 1.13-.73.34-.35.55-.67.73-1.13.14-.34.3-.86.34-1.82.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.82a3 3 0 0 0-.73-1.13 3 3 0 0 0-1.13-.73c-.34-.14-.86-.3-1.82-.34-1.24-.06-1.59-.07-4.74-.07Zm0 3.37a4.45 4.45 0 1 1 0 8.9 4.45 4.45 0 0 1 0-8.9Zm0 1.98a2.47 2.47 0 1 0 0 4.94 2.47 2.47 0 0 0 0-4.94Zm4.63-2.2a1.04 1.04 0 1 1 0 2.08 1.04 1.04 0 0 1 0-2.08Z"
+                        />
+                      </svg>
+                      Assistir no Instagram
+                    </i>
+                  </span>
+                </a>
+              ) : (
+                <figure className={partner.className} key={partner.src}>
+                  <img src={partner.src} alt={partner.alt} loading="lazy" />
+                </figure>
+              ),
+            )}
           </div>
         </section>
 
