@@ -545,7 +545,7 @@ img {
 .section-heading h2,
 .social h2 {
   margin-top: 1.3rem;
-  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  font-size: clamp(2rem, 3.8vw, 3.8rem);
 }
 
 .about-content {
@@ -1220,7 +1220,7 @@ img {
 .insights-kpis small {
   min-height: 2em;
   color: rgba(255, 255, 255, 0.48);
-  font-size: 0.6rem;
+  font-size: 0.56rem;
   font-weight: 800;
   line-height: 1.25;
   text-transform: uppercase;
@@ -1228,8 +1228,8 @@ img {
 
 .insights-kpis strong {
   margin-top: 0.4rem;
-  font-size: clamp(1.5rem, 2.5vw, 2.35rem);
-  letter-spacing: -0.07em;
+  font-size: clamp(1.05rem, 1.7vw, 1.6rem);
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 
@@ -1387,14 +1387,14 @@ img {
 }
 
 .card-topline span {
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .card-topline small {
   color: rgba(255, 255, 255, 0.38);
-  font-size: 0.64rem;
+  font-size: 0.58rem;
 }
 
 .gender-chart {
@@ -3520,7 +3520,7 @@ footer > span:last-child {
   .audience h2,
   .section-heading h2,
   .social h2 {
-    font-size: clamp(2.2rem, 10vw, 3.6rem);
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
   }
 
   .about-content {
