@@ -619,16 +619,16 @@ export default function Home() {
                       <strong>2.939</strong>
                     </div>
                     <div>
-                      <small>Descoberta (não seguidores)</small>
+                      <small>Descoberta</small>
                       <strong>87,6%</strong>
                     </div>
                     <div>
-                      <small>Faixa etária principal</small>
+                      <small>Faixa etária</small>
                       <strong>25–34</strong>
                     </div>
                     <div>
                       <small>Melhor horário</small>
-                      <strong>18h–21h</strong>
+                      <strong>18–21</strong>
                     </div>
                   </div>
                 </article>
@@ -644,12 +644,12 @@ export default function Home() {
                       <strong>8.705</strong>
                     </div>
                     <div>
-                      <small>Visualizações de publicações</small>
+                      <small>Publicações</small>
                       <strong>1,7 mil</strong>
                     </div>
                     <div>
-                      <small>Gênero predominante</small>
-                      <strong>64% masc.</strong>
+                      <small>Gênero (masc.)</small>
+                      <strong>64%</strong>
                     </div>
                     <div>
                       <small>Origem: pesquisa</small>
@@ -674,7 +674,7 @@ export default function Home() {
                     </div>
                     <div>
                       <small>Short mais visto</small>
-                      <strong>351,8 mil</strong>
+                      <strong>352 mil</strong>
                     </div>
                     <div>
                       <small>Dispositivo: celular</small>

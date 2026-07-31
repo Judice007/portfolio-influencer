@@ -1185,6 +1185,10 @@ img {
   row-gap: 1.15rem;
 }
 
+.audience-highlights-grid .insights-kpis strong {
+  font-size: clamp(0.95rem, 1.5vw, 1.4rem);
+}
+
 .audience-highlights-grid .insights-kpis > div:nth-child(3) {
   padding-left: 0;
   border-left: 0;
