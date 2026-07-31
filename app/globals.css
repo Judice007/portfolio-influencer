@@ -162,8 +162,8 @@ img {
 
 .hero {
   position: relative;
-  min-height: 920px;
-  padding: 11rem max(5vw, 1.5rem) 6rem;
+  min-height: 760px;
+  padding: 8rem max(5vw, 1.5rem) 4.5rem;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(390px, 0.75fr);
   align-items: center;
@@ -250,7 +250,7 @@ img {
 .hero h1 {
   max-width: 880px;
   margin-top: 1.6rem;
-  font-size: clamp(4rem, 7.2vw, 8rem);
+  font-size: clamp(3.2rem, 6vw, 6.4rem);
 }
 
 .hero h1 span,
@@ -357,7 +357,7 @@ img {
 }
 
 .hero-visual {
-  min-height: 640px;
+  min-height: 540px;
   display: grid;
   place-items: center;
   animation: rise-in 760ms 100ms ease-out both;
@@ -529,7 +529,7 @@ img {
 }
 
 .about {
-  padding-block: 7rem 4.5rem;
+  padding-block: 5rem 3.5rem;
 }
 
 .section-label {
@@ -545,7 +545,7 @@ img {
 .section-heading h2,
 .social h2 {
   margin-top: 1.3rem;
-  font-size: clamp(3.2rem, 6vw, 6.5rem);
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
 }
 
 .about-content {
@@ -652,12 +652,12 @@ img {
 }
 
 .feed {
-  padding-block: 4.5rem 7rem;
+  padding-block: 3.5rem 5rem;
 }
 
 .feed-heading h2 {
   max-width: 940px;
-  font-size: clamp(3rem, 5.5vw, 5.9rem);
+  font-size: clamp(2.4rem, 4.5vw, 4.7rem);
 }
 
 .universe-topics {
@@ -963,7 +963,7 @@ img {
 
 .feed-highlight-card {
   position: relative;
-  height: 430px;
+  height: 370px;
   overflow: hidden;
   border-radius: 17px;
   background: #181818;
@@ -1065,7 +1065,7 @@ img {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: 315px;
+  grid-auto-rows: 270px;
   gap: 1rem;
 }
 
@@ -1100,7 +1100,7 @@ img {
 }
 
 .audience {
-  padding-block: 7rem;
+  padding-block: 5rem;
   overflow: hidden;
   background:
     radial-gradient(circle at 90% 10%, rgba(237, 52, 57, 0.2), transparent 24%),
@@ -2455,7 +2455,7 @@ img {
 }
 
 .partners {
-  padding-block: 7rem 5rem;
+  padding-block: 5rem 3.5rem;
 }
 
 .section-heading {
@@ -2481,7 +2481,7 @@ img {
 
 .partner-card {
   position: relative;
-  min-height: 255px;
+  min-height: 220px;
   margin: 0;
   padding: 1.3rem;
   display: grid;
@@ -2518,7 +2518,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-height: 205px;
+  max-height: 175px;
   object-fit: contain;
 }
 
@@ -2618,7 +2618,7 @@ img {
 }
 
 .social {
-  padding-block: 5rem 7rem;
+  padding-block: 3.5rem 5rem;
 }
 
 .social-heading {
@@ -2796,7 +2796,7 @@ img {
 }
 
 .youtube-feature {
-  min-height: 350px;
+  min-height: 300px;
   padding: 1.15rem;
   display: flex;
   flex: 1;
@@ -2889,7 +2889,7 @@ img {
 }
 
 .youtube-covers {
-  min-height: 245px;
+  min-height: 210px;
   display: grid;
   flex: 1;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2936,7 +2936,7 @@ img {
 }
 
 .tiktok-feature {
-  min-height: 350px;
+  min-height: 300px;
   padding: 1.15rem;
   display: flex;
   flex: 1;
@@ -3030,7 +3030,7 @@ img {
 }
 
 .tiktok-covers {
-  min-height: 245px;
+  min-height: 210px;
   display: grid;
   flex: 1;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3133,8 +3133,8 @@ img {
 
 .contact {
   position: relative;
-  min-height: 650px;
-  padding: 7rem 1.5rem 3rem;
+  min-height: 520px;
+  padding: 5rem 1.5rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3179,7 +3179,7 @@ img {
   z-index: 2;
   width: min(1050px, calc(100% - 2rem));
   margin-top: 1.5rem;
-  font-size: clamp(3rem, 6.5vw, 7rem);
+  font-size: clamp(2.4rem, 5.5vw, 5.6rem);
 }
 
 .contact h2 span {
@@ -3439,15 +3439,15 @@ footer > span:last-child {
 
   .hero {
     min-height: auto;
-    padding: 9rem 1.25rem 4.5rem;
+    padding: 6.5rem 1.25rem 3.5rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.25rem, 13vw, 5rem);
+    font-size: clamp(2.6rem, 11vw, 4rem);
   }
 
   .hero-visual {
-    min-height: 530px;
+    min-height: 460px;
   }
 
   .portrait-card {
@@ -3475,14 +3475,14 @@ footer > span:last-child {
   }
 
   .about {
-    padding-block: 5rem;
+    padding-block: 3.5rem;
   }
 
   .about h2,
   .audience h2,
   .section-heading h2,
   .social h2 {
-    font-size: clamp(2.7rem, 11vw, 4.5rem);
+    font-size: clamp(2.2rem, 10vw, 3.6rem);
   }
 
   .about-content {
@@ -3552,7 +3552,7 @@ footer > span:last-child {
   }
 
   .audience {
-    padding-block: 5rem;
+    padding-block: 3.5rem;
   }
 
   .audience-dashboard {
@@ -3709,7 +3709,7 @@ footer > span:last-child {
   }
 
   .partners {
-    padding-block: 5rem 3.5rem;
+    padding-block: 3.5rem 2.5rem;
   }
 
   .partners-grid {
@@ -3721,7 +3721,7 @@ footer > span:last-child {
   }
 
   .social {
-    padding-block: 4rem 5rem;
+    padding-block: 3rem 3.5rem;
   }
 
   .social-grid {
@@ -3764,7 +3764,7 @@ footer > span:last-child {
 
   .contact h2 {
     width: min(100%, 760px);
-    font-size: clamp(2.9rem, 12vw, 5rem);
+    font-size: clamp(2.3rem, 11vw, 4rem);
   }
 
   footer {
@@ -3809,7 +3809,7 @@ footer > span:last-child {
   }
 
   .feed {
-    padding-block: 3.5rem 5rem;
+    padding-block: 2.5rem 3.5rem;
   }
 
   .universe-topics {
