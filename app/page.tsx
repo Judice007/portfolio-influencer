@@ -578,109 +578,111 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="audience-dashboard">
-              <article className="insights-card data-card">
-                <div className="card-topline">
-                  <span>Resumo geral</span>
-                  <small>Todas as redes · {PROFILE_SNAPSHOT_DATE}</small>
-                </div>
+            <div className="audience-stats">
+              <div className="audience-dashboard">
+                <article className="insights-card data-card">
+                  <div className="card-topline">
+                    <span>Resumo geral</span>
+                    <small>Todas as redes · {PROFILE_SNAPSHOT_DATE}</small>
+                  </div>
 
-                <div className="insights-kpis">
-                  <div>
-                    <small>Seguidores no total</small>
-                    <strong>14,7 mil</strong>
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Seguidores no total</small>
+                      <strong>14,7 mil</strong>
+                    </div>
+                    <div>
+                      <small>Contas alcançadas (Instagram)</small>
+                      <strong>46.967</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações (YouTube)</small>
+                      <strong>1,4 mi</strong>
+                    </div>
+                    <div>
+                      <small>Interações (Instagram)</small>
+                      <strong>2,5 mil</strong>
+                    </div>
                   </div>
-                  <div>
-                    <small>Contas alcançadas (Instagram)</small>
-                    <strong>46.967</strong>
-                  </div>
-                  <div>
-                    <small>Visualizações (YouTube)</small>
-                    <strong>1,4 mi</strong>
-                  </div>
-                  <div>
-                    <small>Interações (Instagram)</small>
-                    <strong>2,5 mil</strong>
-                  </div>
-                </div>
-              </article>
-            </div>
+                </article>
+              </div>
 
-            <div className="audience-highlights-grid">
-              <article className="data-card">
-                <div className="card-topline">
-                  <span>Instagram</span>
-                  <small>@judice007 · {PROFILE_SNAPSHOT_DATE}</small>
-                </div>
-                <div className="insights-kpis">
-                  <div>
-                    <small>Seguidores</small>
-                    <strong>2.939</strong>
+              <div className="audience-highlights-grid">
+                <article className="data-card platform-card platform-card-instagram">
+                  <div className="card-topline">
+                    <span>Instagram</span>
+                    <small>@judice007 · {PROFILE_SNAPSHOT_DATE}</small>
                   </div>
-                  <div>
-                    <small>Descoberta (não seguidores)</small>
-                    <strong>87,6%</strong>
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Seguidores</small>
+                      <strong>2.939</strong>
+                    </div>
+                    <div>
+                      <small>Descoberta (não seguidores)</small>
+                      <strong>87,6%</strong>
+                    </div>
+                    <div>
+                      <small>Faixa etária principal</small>
+                      <strong>25–34</strong>
+                    </div>
+                    <div>
+                      <small>Melhor horário</small>
+                      <strong>18h–21h</strong>
+                    </div>
                   </div>
-                  <div>
-                    <small>Faixa etária principal</small>
-                    <strong>25–34</strong>
-                  </div>
-                  <div>
-                    <small>Melhor horário</small>
-                    <strong>18h–21h</strong>
-                  </div>
-                </div>
-              </article>
+                </article>
 
-              <article className="data-card">
-                <div className="card-topline">
-                  <span>TikTok</span>
-                  <small>@judice007 · {TIKTOK_SNAPSHOT_PERIOD}</small>
-                </div>
-                <div className="insights-kpis">
-                  <div>
-                    <small>Seguidores</small>
-                    <strong>8.705</strong>
+                <article className="data-card platform-card platform-card-tiktok">
+                  <div className="card-topline">
+                    <span>TikTok</span>
+                    <small>@judice007 · {TIKTOK_SNAPSHOT_PERIOD}</small>
                   </div>
-                  <div>
-                    <small>Visualizações de publicações</small>
-                    <strong>1,7 mil</strong>
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Seguidores</small>
+                      <strong>8.705</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações de publicações</small>
+                      <strong>1,7 mil</strong>
+                    </div>
+                    <div>
+                      <small>Gênero predominante</small>
+                      <strong>64% masc.</strong>
+                    </div>
+                    <div>
+                      <small>Origem: pesquisa</small>
+                      <strong>83,4%</strong>
+                    </div>
                   </div>
-                  <div>
-                    <small>Gênero predominante</small>
-                    <strong>64% masc.</strong>
-                  </div>
-                  <div>
-                    <small>Origem: pesquisa</small>
-                    <strong>83,4%</strong>
-                  </div>
-                </div>
-              </article>
+                </article>
 
-              <article className="data-card">
-                <div className="card-topline">
-                  <span>YouTube</span>
-                  <small>Judice007 · {YOUTUBE_SNAPSHOT_DATE}</small>
-                </div>
-                <div className="insights-kpis">
-                  <div>
-                    <small>Inscritos</small>
-                    <strong>3.054</strong>
+                <article className="data-card platform-card platform-card-youtube">
+                  <div className="card-topline">
+                    <span>YouTube</span>
+                    <small>Judice007 · {YOUTUBE_SNAPSHOT_DATE}</small>
                   </div>
-                  <div>
-                    <small>Visualizações totais</small>
-                    <strong>1,4 mi</strong>
+                  <div className="insights-kpis">
+                    <div>
+                      <small>Inscritos</small>
+                      <strong>3.054</strong>
+                    </div>
+                    <div>
+                      <small>Visualizações totais</small>
+                      <strong>1,4 mi</strong>
+                    </div>
+                    <div>
+                      <small>Short mais visto</small>
+                      <strong>351,8 mil</strong>
+                    </div>
+                    <div>
+                      <small>Dispositivo: celular</small>
+                      <strong>68,5%</strong>
+                    </div>
                   </div>
-                  <div>
-                    <small>Short mais visto</small>
-                    <strong>351,8 mil</strong>
-                  </div>
-                  <div>
-                    <small>Dispositivo: celular</small>
-                    <strong>68,5%</strong>
-                  </div>
-                </div>
-              </article>
+                </article>
+              </div>
             </div>
           </div>
         </section>
