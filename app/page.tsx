@@ -1,4 +1,3 @@
-import { PartnerReelEmbed } from "./partner-reel-embed";
 import { SiteHeader } from "./site-header";
 
 // Snapshot dates for the analytics screenshots below. Update these together
@@ -710,13 +709,37 @@ export default function Home() {
           <div className="partners-grid">
             {partners.map((partner) =>
               partner.kind === "reel" ? (
-                <article className={partner.className} key={partner.src}>
-                  <div className="partner-reel-heading">
+                <a
+                  className={partner.className}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Assistir ao Reel ${partner.title} no Instagram`}
+                  key={partner.src}
+                >
+                  <img src={partner.src} alt={partner.alt} loading="lazy" />
+                  <span className="partner-reel-play" aria-hidden="true">
+                    ▶
+                  </span>
+                  <span className="partner-reel-copy">
                     <small>{partner.eyebrow}</small>
                     <strong>{partner.title}</strong>
-                  </div>
-                  <PartnerReelEmbed href={partner.href} title={partner.title} />
-                </article>
+                    <i>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="13"
+                        height="13"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.59 1.8c.46-.16 1.26-.35 2.43-.4C9.29 1.34 9.67 1.33 12 1.33Zm0 1.98c-3.15 0-3.5.01-4.74.07-.96.04-1.48.2-1.82.34-.46.18-.78.39-1.13.73-.34.35-.55.67-.73 1.13-.14.34-.3.86-.34 1.82-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.96.2 1.48.34 1.82.18.46.39.78.73 1.13.35.34.67.55 1.13.73.34.14.86.3 1.82.34 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.82-.34.46-.18.78-.39 1.13-.73.34-.35.55-.67.73-1.13.14-.34.3-.86.34-1.82.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.82a3 3 0 0 0-.73-1.13 3 3 0 0 0-1.13-.73c-.34-.14-.86-.3-1.82-.34-1.24-.06-1.59-.07-4.74-.07Zm0 3.37a4.45 4.45 0 1 1 0 8.9 4.45 4.45 0 0 1 0-8.9Zm0 1.98a2.47 2.47 0 1 0 0 4.94 2.47 2.47 0 0 0 0-4.94Zm4.63-2.2a1.04 1.04 0 1 1 0 2.08 1.04 1.04 0 0 1 0-2.08Z"
+                        />
+                      </svg>
+                      Assistir no Instagram
+                    </i>
+                  </span>
+                </a>
               ) : (
                 <figure className={partner.className} key={partner.src}>
                   <img src={partner.src} alt={partner.alt} loading="lazy" />
