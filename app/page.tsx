@@ -34,26 +34,28 @@ const instagramPosts = [
     alt: "Felipe Júdice no Angra Summit, evento de networking",
     href: "https://www.instagram.com/judice007/p/DQdAhOTDYp1/",
     className: "feed-card",
+    focus: "80% 55%",
   },
   {
     src: "/instagram/praia-lopes-mendes.jpg",
     alt: "Felipe Júdice na Praia de Lopes Mendes",
     href: "https://www.instagram.com/judice007/p/DTGFZekkZ8m/",
     className: "feed-card",
+    focus: "75% 55%",
   },
   {
     src: "/instagram/paraty.jpg",
     alt: "Felipe Júdice no Centro Histórico de Paraty",
     href: "https://www.instagram.com/judice007/p/DTjaiJ_DObI/",
     className: "feed-card",
-    focus: "80% center",
+    focus: "72% 35%",
   },
   {
     src: "/instagram/sao-paulo-2.jpg",
     alt: "Felipe Júdice passando alguns dias em São Paulo",
     href: "https://www.instagram.com/judice007/p/DVwzdRklDC9/",
     className: "feed-card",
-    focus: "20% center",
+    focus: "22% 40%",
   },
 ] as const;
 
