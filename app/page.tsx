@@ -1,3 +1,4 @@
+import { PartnerReelEmbed } from "./partner-reel-embed";
 import { SiteHeader } from "./site-header";
 
 // Snapshot dates for the analytics screenshots below. Update these together
@@ -709,24 +710,13 @@ export default function Home() {
           <div className="partners-grid">
             {partners.map((partner) =>
               partner.kind === "reel" ? (
-                <a
-                  className={partner.className}
-                  href={partner.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Assistir ao conteúdo ${partner.title} no Instagram`}
-                  key={partner.src}
-                >
-                  <img src={partner.src} alt={partner.alt} loading="lazy" />
-                  <span className="partner-reel-play" aria-hidden="true">
-                    ▶
-                  </span>
-                  <span className="partner-reel-copy">
+                <article className={partner.className} key={partner.src}>
+                  <div className="partner-reel-heading">
                     <small>{partner.eyebrow}</small>
                     <strong>{partner.title}</strong>
-                    <i>Ver Reel ↗</i>
-                  </span>
-                </a>
+                  </div>
+                  <PartnerReelEmbed href={partner.href} title={partner.title} />
+                </article>
               ) : (
                 <figure className={partner.className} key={partner.src}>
                   <img src={partner.src} alt={partner.alt} loading="lazy" />
