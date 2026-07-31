@@ -1132,6 +1132,23 @@ img {
   gap: 1rem;
 }
 
+.audience-highlights-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.audience-highlights-grid .insights-kpis {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 1.15rem;
+}
+
+.audience-highlights-grid .insights-kpis > div:nth-child(3) {
+  padding-left: 0;
+  border-left: 0;
+}
+
 .insights-card {
   grid-column: 1 / -1;
 }
@@ -3532,6 +3549,10 @@ footer > span:last-child {
   }
 
   .audience-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-highlights-grid {
     grid-template-columns: 1fr;
   }
 
