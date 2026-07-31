@@ -2635,29 +2635,6 @@ img {
   transform: scale(1.045);
 }
 
-.partner-reel-play {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  width: 52px;
-  height: 52px;
-  display: grid;
-  place-items: center;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  background: rgba(10, 10, 10, 0.45);
-  color: var(--paper-bright);
-  font-size: 1rem;
-  backdrop-filter: blur(8px);
-  transition: transform 240ms ease;
-}
-
-.partner-card-reel:hover .partner-reel-play {
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
 .partner-reel-copy {
   position: absolute;
   z-index: 3;

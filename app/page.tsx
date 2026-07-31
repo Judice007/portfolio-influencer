@@ -138,8 +138,8 @@ const mostViewedYouTubeVideos = [
 const partners = [
   {
     kind: "reel",
-    src: "/partners/betmgm-reel.webp",
-    alt: "Frame do conteúdo de Felipe Júdice para a BetMGM",
+    src: "/partners/betmgm-reel.jpg",
+    alt: "Felipe Júdice gravando conteúdo gamer para a campanha BetMGM",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DTti-_ijHNk/",
     eyebrow: "Campanha publicitária",
@@ -147,8 +147,8 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/le-cordon-bleu-reel.webp",
-    alt: "Felipe Júdice no evento Le Cordon Bleu Rio de Janeiro",
+    src: "/partners/le-cordon-bleu-reel.jpg",
+    alt: "Capa do Reel de Felipe Júdice na Expo Le Cordon Bleu",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DPab2fLDFDj/",
     eyebrow: "Experiência gastronômica",
@@ -156,7 +156,7 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/maxtitanium-reel.webp",
+    src: "/partners/maxtitanium-reel.jpg",
     alt: "Felipe Júdice apresentando produtos da Max Titanium",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DOZYukmDicA/",
@@ -165,8 +165,8 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/meta-ai-reel.webp",
-    alt: "Felipe Júdice apresentando a campanha da Meta AI com o Flamengo",
+    src: "/partners/meta-ai-reel.jpg",
+    alt: "Meta AI gerando uma imagem de urubu com as cores do Flamengo",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DRvLleegSqc/",
     eyebrow: "Tecnologia e futebol",
@@ -174,8 +174,8 @@ const partners = [
   },
   {
     kind: "reel",
-    src: "/partners/tburger-reel.webp",
-    alt: "Fachada da T.Burger House em conteúdo de Felipe Júdice",
+    src: "/partners/tburger-reel.jpg",
+    alt: "Felipe Júdice comendo um hambúrguer da T.Burger House",
     className: "partner-card partner-card-reel",
     href: "https://www.instagram.com/reel/DRA2YijkXc8/",
     eyebrow: "Gastronomia em Angra",
@@ -718,9 +718,6 @@ export default function Home() {
                   key={partner.src}
                 >
                   <img src={partner.src} alt={partner.alt} loading="lazy" />
-                  <span className="partner-reel-play" aria-hidden="true">
-                    ▶
-                  </span>
                   <span className="partner-reel-copy">
                     <small>{partner.eyebrow}</small>
                     <strong>{partner.title}</strong>
